@@ -1,0 +1,106 @@
+:root {
+	--paper: #171916;
+	--paper-deep: #222620;
+	--ink: #f3f0e8;
+	--muted: #b4b7ad;
+	--line: #41463e;
+	--accent: #e07859;
+	--display: "Oswald", Impact, sans-serif;
+	--body: "DM Sans", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.site-header, main, .site-footer { width: min(100% - 64px, 1050px); margin-inline: auto; }
+.site-header { min-height: 70px; display: flex; align-items: center; justify-content: space-between; gap: 24px; border-bottom: 1px solid var(--line); }
+.brand { display: inline-flex; align-items: center; gap: 9px; font: 600 18px var(--display); letter-spacing: .7px; }
+.brand-icon { color: var(--accent); font-size: 25px; }
+.navigation { display: flex; align-items: center; gap: 8px; }
+.navigation a { padding: 9px 12px; font-size: 11px; font-weight: 600; text-transform: uppercase; transition: color .2s, background .2s; }
+.navigation a:hover { color: var(--accent); }
+.navigation .nav-appointment { margin-left: 5px; border: 1px solid var(--ink); }
+.navigation .nav-appointment span { margin-left: 8px; color: var(--accent); }
+
+.hero { min-height: 330px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 38px; padding: 26px 14px 34px; }
+.hero-image { height: 265px; overflow: hidden; background: #2b3028; }
+.hero-copy { max-width: 390px; }
+.eyebrow { margin: 0 0 11px; color: var(--accent); font-size: 9px; font-weight: 700; letter-spacing: 1.6px; text-transform: uppercase; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { font-family: var(--display); font-weight: 500; text-transform: uppercase; }
+h1 { margin-bottom: 13px; font-size: clamp(39px, 5.5vw, 63px); line-height: 1.02; }
+h1 em { color: var(--accent); font-style: normal; }
+.hero-copy > p:not(.eyebrow) { max-width: 320px; margin-bottom: 19px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.button { min-height: 42px; display: inline-flex; align-items: center; justify-content: space-between; gap: 24px; padding: 0 15px; background: var(--accent); color: #171916; font-size: 10px; font-weight: 700; text-transform: uppercase; transition: background .2s, transform .2s; }
+.button:hover { transform: translateY(-2px); background: #f08b6a; }
+.button span { color: #eab6a5; font-size: 14px; }
+
+.section { padding: 27px 14px 34px; border-top: 1px solid var(--line); }
+.section-heading { margin-bottom: 18px; text-align: center; }
+.section-heading .eyebrow { margin-bottom: 5px; }
+h2 { margin-bottom: 0; font-size: 30px; line-height: 1.15; }
+.service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.service-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); background: rgb(255 255 255 / 3%); transition: border-color .2s, transform .2s; }
+.service-card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.service-photo { width: 100%; aspect-ratio: 2 / 1; object-fit: cover; }
+.service-details { padding: 12px 14px 14px; }
+.service-title-row { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+.service-card h3 { margin-bottom: 2px; font-size: 17px; }
+.service-title-row strong { flex: 0 0 auto; color: var(--accent); font-size: 11px; }
+.service-card p { margin-bottom: 0; color: var(--muted); font-size: 10px; }
+
+.hair-catalog { background: var(--paper-deep); }
+.haircut-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.haircut-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); background: #292d27; }
+.haircut-photo { width: 100%; height: auto; aspect-ratio: 3 / 2; object-fit: cover; }
+.haircut-info { display: grid; gap: 4px; padding: 12px 14px 14px; }
+.haircut-info h3 { margin-bottom: 0; font-size: 17px; }
+.haircut-info strong { color: var(--accent); font-size: 15px; font-weight: 700; }
+
+.about { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 28px; padding-top: 30px; padding-bottom: 30px; }
+.about-image { height: 190px; overflow: hidden; background: #2b3028; }
+.about-copy .eyebrow { margin-bottom: 6px; }
+.about-copy h2 { margin-bottom: 9px; font-size: 26px; }
+.about-copy > p:not(.eyebrow) { margin-bottom: 8px; color: var(--muted); font-size: 11px; line-height: 1.6; }
+.about-copy ul { display: grid; gap: 5px; margin: 0; padding: 0; list-style: none; font-size: 10px; }
+.about-copy li::before { margin-right: 7px; color: var(--accent); content: "✓"; font-weight: 700; }
+
+.contact { display: flex; flex-direction: column; align-items: center; padding-top: 25px; padding-bottom: 27px; text-align: center; }
+.contact .eyebrow { margin-bottom: 4px; }
+.contact h2 { margin-bottom: 10px; }
+.contact address { display: grid; gap: 4px; margin-bottom: 14px; font-size: 11px; font-style: normal; }
+.contact address > * { display: inline-flex; align-items: center; justify-content: center; gap: 7px; }
+.contact address span span { color: var(--accent); }
+.contact-button { min-height: 38px; }
+
+.site-footer { min-height: 48px; display: grid; place-items: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 10px; text-align: center; }
+
+@media (max-width: 620px) {
+	.site-header, main, .site-footer { width: min(100% - 32px, 480px); }
+	.site-header { align-items: flex-start; flex-direction: column; gap: 8px; padding: 13px 0 10px; }
+	.navigation { width: 100%; justify-content: space-between; gap: 2px; }
+	.navigation a { padding: 8px 6px; font-size: 9px; }
+	.navigation .nav-appointment { margin-left: 1px; }
+	.navigation .nav-appointment span { margin-left: 3px; }
+	.hero { grid-template-columns: 1fr; gap: 20px; padding: 19px 0 24px; }
+	.hero-image { height: 220px; }
+	.hero-copy { max-width: none; }
+	h1 { font-size: 47px; }
+	.section { padding: 23px 0 27px; }
+	.service-grid { grid-template-columns: 1fr; gap: 9px; }
+	.service-photo { aspect-ratio: 2.2 / 1; }
+	.service-details { padding: 10px 13px 12px; }
+	.haircut-grid { grid-template-columns: 1fr; gap: 12px; }
+	.haircut-photo { aspect-ratio: 2 / 1; }
+	.haircut-info { padding: 10px 13px 12px; }
+	.about { grid-template-columns: 1fr; gap: 18px; }
+	.about-image { height: 210px; }
+	.about-copy h2 { font-size: 28px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+	*, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
